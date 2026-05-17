@@ -1,0 +1,6 @@
+1: What was hard? What was easy?
+Yes, it is a hard session to start everything from scratch, but it is good exercise for the exam practice. The easy part was that with the agents, we could resume the agents from the integration test bench. 
+
+2: How much time you used to finish this exercise?
+* Group member 1: 4 hours 
+* Group member 2: 4 hours

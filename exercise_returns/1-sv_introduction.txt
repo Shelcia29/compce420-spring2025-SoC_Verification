@@ -1,0 +1,30 @@
+1: Do you have previous experience of hardware description languages? Which of these design languages/paradigms have you used before?
+<VHDL | Verilog/SystemVerilog | SystemC | High-level Synthesis | others?>
+
+I have used Verilog and a little of System Verilog, also learned VHDL a bit.
+
+2: What is the advantage of using a testbench rather than a ".do" file?
+
+A testbench is more flexible and reusable, allowing you to simulate and verify different inputs and conditions. It also integrates with the design for automatic testing, while a ".do" file is mainly for manual control and running predefined commands.
+
+3: Why do we call these testbenches simple testbenches? What crucial testbench functionality is missing?
+
+A "simple testbench" is a basic setup used to check if a design works,they focus only on basic input generation and simulation without automation.
+
+But it lacks some important features for thorough testing. Here’s what’s missing:
+Random Inputs
+Error Checking
+Coverage
+Comparison
+Timing/Synchronization
+Fault Testing
+
+4: What is the difference between initial and always procedures in SystemVerilog?
+
+initial: Runs once at the start of the simulation and is used to set initial conditions.
+always: Runs continuously during the simulation, triggered by certain conditions.
+
+5: How much time you used to finish this exercise?
+
+* Group member 1: 1hour
+* Group member 2: 1hour

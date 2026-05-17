@@ -1,0 +1,35 @@
+1: What is the difference between concurrent and immediate assertions?
+
+Immediate Assertions
+
+>Checked instantly when simulation reaches the line.
+>Used inside always or initial blocks.
+>Checks simple, single-time conditions.
+>Good for debugging and basic sanity checks.
+>Example: assert (A == B);
+
+Concurrent Assertions
+
+> Checked over time, using clocked behavior.
+>Can be used inside or outside procedural blocks.
+>Checks sequences (e.g., "A happens, then B after 2 clocks").
+>Good for protocol checks, timing, and formal verification.
+>Example: assert property (@(posedge clk) A |-> ##2 B);
+
+
+2: How does validation differ from verification?
+
+Validation: Ensures the product meets the user's needs. It checks if you are building the right product.
+
+Verification: Ensures the product works according to the design specification. It checks if you are building the product correctly.
+
+3: Did you see any problems in the design and/or specification?
+
+We could only find 3 instances of errors, so we added assertions for them.
+>Inputs not stable when enable_in rises
+>enable_in rising again while in the READY state
+>valid_out not rising within 3 cycles after enable_in rises
+
+4: How much time you used to finish this exercise?
+* Group member 1: <2hrs>
+* Group member 2: <2hrs>

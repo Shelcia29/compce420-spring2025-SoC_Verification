@@ -1,0 +1,23 @@
+1: What is the responsibility of the monitor in UVM environment?
+
+Observe the signals going in and out of the DUT
+
+2: Why do we create the monitor in the agent and not directly in the environment?
+
+Agent file has all the DUT related component handlers for the sake of reusability; therefore we create the monitor in the agent. 
+
+3: What is the reason for extending your monitor from uvm_monitor base class instead of declaring the class yourself?
+
+Extending uvm_monitor provides in built uvm functionalities such as phase execution, debugging and factory registration(no direct call to constructor).
+
+4: What is the difference between tasks and functions in SystemVerilog? Why is the run_phase method a task, when other phase methods seem to be functions?
+
+Tasks contains delays whereas functions do not contain delays.
+ 
+Other phases (like build_phase, connect_phase) generally execute a sequence of actions that happen once and do not need to wait for time-based events. 
+They typically contain configurations or object creation, making them appropriate for functions.
+The run_phase requires an ongoing loop with event waiting and time-controlled operations, making it appropriate to implement as a task.
+
+5: How much time you used to finish this exercise?
+* Group member 1: 1.5hours
+* Group member 2: 1.5hours

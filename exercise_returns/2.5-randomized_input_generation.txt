@@ -1,0 +1,15 @@
+1: What is the advantage of using constrained random sequences instead of directed testing?
+Directed testing is time consuming and error-prone whereas using constrained random sequences is more effective. It helps to hit corner cases to reveal bugs.
+
+2: Which signals you decided to randomize? Did you use constraints for randomization?
+We randomized the specific signals depends on DUT and common signals randomized are data inputs.Yes constraints for randomization are used to limit the values of the random signals to valid or relevant ranges. For example, we randomize a data signal with constraints like data >= 0 and data < 1024 to ensure the values are within a valid range, and randomize a write_enable signal with a distribution constraint like write_enable dist { 0 := 9, 1 := 1 }; to ensure a certain frequency of writes. 
+
+3: What is the reason for creating a new test for the constrained random testing instead of modifying the test_base?
+If we modify the test_base directly, it could affect all other tests, leading to unintended consequences. Having a random test class makes it easier to control and tailor the behavior for the random sequences and maintain the clarity and stability of the test environment.
+
+4: Why is it better to tell the test name in the simulator command line instead of top level?
+It is better to tell the test name in the simulator command line instead of in the top level because this approach allows more flexibility and control over which test to run. By specifying the test name at the command line (e.g., make +UVM_TESTNAME=random_test;), we can easily switch between different tests without modifying the code or the testbench itself.
+
+5: How much time you used to finish this exercise?
+* Group member 1: 2 hrs
+* Group member 2: 2 hrs

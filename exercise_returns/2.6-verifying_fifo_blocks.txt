@@ -1,0 +1,24 @@
+1: What kind of bugs did you find?
+1.1: fifo1.vhd
+The identified bug is "Read Allowed When FIFO is Empty." This leads to invalid data being read or potentially undefined behavior. The scoreboard error prints clearly indicate an attempted read from an empty FIFO. The root cause of the issue is that the FIFO read logic in fifo1.vhd does not check the empty condition before allowing a read. Specifically, the empty_out signal is not properly checked. For example, if re_in = '1' when empty_out = '1', an invalid read occurs, potentially producing bad data and corrupting FIFO behavior. To fix this bug, we should modify the read logic to check empty_out before allowing a read.
+
+1.2: fifo2.vhd
+The identified bug is "Read Allowed When FIFO is Empty." This leads to invalid data being read or potentially undefined behavior. The scoreboard error prints clearly indicate an attempted read from an empty FIFO. The root cause of the issue is that the FIFO read logic in fifo2.vhd does not check the empty condition before allowing a read. Specifically, the read operation (re_in = '1') does not correctly prevent reading when the FIFO is empty. Additionally, the empty_out flag is set incorrectly when the FIFO is empty.
+
+2: (Optional) To implement the same kind of behaviour in fifo.vhd, which code lines should you edit and how?
+(Give line number and your modification)
+1.1: fifo1.vhd
+To fix this bug, we need to modify the read logic to prevent reads when the FIFO is empty (see line 63)
+
+1.2: fifo2.vhd
+To fix this bug, we need to add a check to prevent reading when g (empty_out) = '1' (FIFO empty) and ensure that empty_out is updated correctly (see line 67).
+
+3: Did you have to modify your environment to see the bugs? Where and why?
+No modifications were made to our test environment (agent sequence, driver, and monitor) to detect the bugs. The scoreboard accurately reports the error when a read from an empty FIFO is attempted.
+
+4: Did you have to modify your tests or sequences to see the bugs? Where and why?
+We modified our FIFO top file to clear the error with a fatal print, which essentially stopped the program from running further. Other than that, the testbench correctly monitors FIFO behavior, so the bug was caught without any modifications.
+
+5: How much time you used to finish this exercise?
+* Group member 1: <hh:mm> 6 hrs
+* Group member 2: <hh:mm> 6 hrs

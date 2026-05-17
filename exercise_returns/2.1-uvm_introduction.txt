@@ -1,0 +1,55 @@
+1: Do you have previous experience of verification? Which of these have you used before?
+<self-checking VHDL testbenches | UVM | OVM | eRM/AVM/RVM/VMM/other methodologies | Formal verification>
+
+Yes, self-checking VHDL testbenches was covered in Digital Design course, UVM and Formal Verification : had a general idea from the previous work experience.
+
+2: What is a DUT?
+
+A DUT (Device Under Test) refers to the actual SoC or a specific part of the chip that is being tested and verified during the validation process.
+
+3: What does the UVM environment contain?
+
+In UVM, the verification environment is a structured and modular framework that contains various components designed to facilitate thorough and efficient verification. The main components of a typical UVM environment include: Test Class, Environment (env) Class, Agent Class, Driver, Sequencer, Monitor, Scoreboard, Sequencer, Configuration Database, Utilities
+
+4: If you were to declare your own component class "my_class" to this UVM environment: 
+  4.1: Which folder would be the convenient place for your file?
+
+In a typical UVM project, the "my_class" file should be placed in a folder that holds the user-defined components of the testbench. 
+This folder contains all the user-defined source code files, including classes, components, and tests.
+(fifo_tb/fifo_tb_pkg)
+
+  4.2: How would you name your new file?
+
+The component class file can be named as my_class.sv
+
+  4.3: How would you add your new file to be compiled?
+
+Include the my_class.svh to the file fifo_tb_pkg.sv
+
+5: The driver is the component responsible for driving the DUT input signals. Open the driver and DUT descriptions and answer the following:
+  5.1: What is the input port name for "write enable" signal in the DUT?
+       
+	we_out 
+
+  5.2: Which line in the driver code drives the DUT signal "write enable"? What is the signal name there?
+	
+	dut_vi.we_out      = tx.write_enable;
+
+  5.3: Where does this difference come from - how are these signals connected to each other? Which files in the UVM environment are responsible for this?
+
+The difference in signal names comes from the distinction between the transaction object and the DUT interface. The transaction object uses a higher-level abstraction (write_enable), while the DUT interface uses the actual signal name (we_out). These signals are connected through the driver code, where the driver's run_phase task maps the transaction fields to the corresponding DUT interface signals.
+
+  5.4: There is also a transaction object tx in the driver. How is this object related to DUT signals? What is the name for the "write enable" signal there?
+
+The transaction object tx contains the data that needs to be driven onto the DUT signals. The fields of this object (such as tx.write_enable) are mapped to the corresponding DUT interface signals (such as dut_vi.we_out) in the driver's run_phase task.
+The name for the "write enable" signal in the transaction object is write_enable.
+
+  5.5: Where is this transaction object first created and how is it delivered to the driver?
+
+The transaction object tx is first created in the sequence, which is responsible for generating the stimulus for the DUT.
+It is delivered to the driver through the seq_item_port.get_next_item(tx) call in the driver's run_phase task. The sequencer sends the transaction object to the driver for processing.
+
+6: How much time you used to finish this exercise?
+* Group member 1: 2h
+* Group member 2: 2h
+

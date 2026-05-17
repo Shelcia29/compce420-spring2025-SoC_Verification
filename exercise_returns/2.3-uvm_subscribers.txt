@@ -1,0 +1,21 @@
+1: What is the responsibility of the coverage collector in UVM environment?
+A coverage collector utilizes SystemVerilog coverage constructs to inspect incoming transactions and record coverage statistics.
+
+
+2: What is a covergroup? 
+Coverage collectors in UVM work with covergroups that define a collection of variables we wish to have statistics on.
+Covergroups consist of coverpoints which are broken down into bins.
+
+
+3: Why did we declare the coverage collector functionality as write() method instead of run_phase task?
+The write function gives the coverage report of the analysed transcation immidiately without waiting for the execution command. 
+
+
+4: What kind of coverage data did you see in the coverage report?
+Coverpoints of following:
+c_data_to_DUT
+c_data_from_DUT
+
+5: How much time you used to finish this exercise?
+* Group member 1: <4h>
+* Group member 2: <4h>

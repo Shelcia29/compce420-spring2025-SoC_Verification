@@ -1,0 +1,7 @@
+1: What was hard? What was easy?
+
+The test for the General Structure, Agents, and Coverage group was relatively easy. However, the remaining sections proved to be challenging. We encountered difficulties in understanding the instructions, particularly regarding which register files needed to be analyzed and the configuration details
+
+2: How much time you used to finish this exercise?
+* Group member 1: <10hrs>
+* Group member 2: <10hrs>
