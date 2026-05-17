@@ -1,0 +1,2 @@
+var g_data = ["","../fifo_tb_pkg/dut_if.sv","../fifo_tb_pkg/fifo_tb_pkg.sv","../fifo_tb_pkg/dut_config.svh","../fifo_tb_pkg/transaction.svh","../fifo_tb_pkg/coverage_collector.svh","../fifo_tb_pkg/monitor.svh","../fifo_tb_pkg/sequencer.svh","../fifo_tb_pkg/driver.svh","../fifo_tb_pkg/agent.svh","../fifo_tb_pkg/env.svh","../fifo_tb_pkg/sequence.svh","../fifo_tb_pkg/test_base.svh","../fifo_tb_top.sv","../rtl/fifo.vhd"];
+processSrcNamesData(g_data);

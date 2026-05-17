@@ -1,0 +1,2 @@
+var g_data = {"8":{"pr":"/fifo_tb_pkg","ty":2,"dui":2,"dun":"work.fifo_tb_pkg","cvgs":[{"h":["/fifo_tb_pkg/coverage_collector/cg",1,1,9],"cov":[128,0,0.00],"opts":{"goal":"100","merge_instance":"auto(true)"}}]}};
+processCovergroupsData(g_data);

@@ -1,0 +1,2 @@
+var g_data = {"9":{"cvpc":[{"h":["c_data_to_DUT",4,1,10],"cov":[64,0,0.00],"opts":{"goal":"100"}},{"h":["c_data_from_DUT",4,1,11],"cov":[64,0,0.00],"opts":{"goal":"100"}}],"cvg":["/fifo_tb_pkg/coverage_collector/cg",1],"cvgdata":[128,0,0,0]}};
+processCoverpointsData(g_data);
