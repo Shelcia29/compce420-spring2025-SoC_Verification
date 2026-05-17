@@ -1,0 +1,906 @@
+QuestaSim-64 vcover 2024.3_2 Coverage Utility 2024.11 Nov 25 2024
+Start time: 13:57:59 on May 30,2025
+vcover report -details vsim.ucdb 
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /fifo_tb_top
+=== Design Unit: work.fifo_tb_top
+=================================================================================
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      11        11         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /fifo_tb_top --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../fifo_tb_top2.sv
+    20              1                          1     
+    21              1                          1     
+    22              1                          1     
+    23              1                          1     
+    24              1                          1     
+    25              1                          1     
+    25              2                          1     
+    30              1                          1     
+    35              1                          1     
+    41              1                      20002     
+    41              2                      20001     
+
+=================================================================================
+=== Instance: /fifo_tb_pkg
+=== Design Unit: work.fifo_tb_pkg
+=================================================================================
+
+Assertion Coverage:
+    Assertions                      10        10         0   100.00%
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/fifo_tb_pkg/scoreboard/write/#ublk#114072647#33/immed__34
+                     ../fifo_tb_pkg2/scoreboard.svh(34)
+                                                        0          1
+/fifo_tb_pkg/scoreboard/write/#ublk#114072647#37/immed__38
+                     ../fifo_tb_pkg2/scoreboard.svh(38)
+                                                        0          1
+/fifo_tb_pkg/scoreboard/write/#ublk#114072647#41/immed__42
+                     ../fifo_tb_pkg2/scoreboard.svh(42)
+                                                        0          1
+/fifo_tb_pkg/scoreboard/write/#ublk#114072647#45/immed__46
+                     ../fifo_tb_pkg2/scoreboard.svh(46)
+                                                        0          1
+/fifo_tb_pkg/scoreboard/write/#ublk#114072647#49/immed__50
+                     ../fifo_tb_pkg2/scoreboard.svh(50)
+                                                        0          1
+/fifo_tb_pkg/scoreboard/write/#ublk#114072647#53/immed__54
+                     ../fifo_tb_pkg2/scoreboard.svh(54)
+                                                        0          1
+/fifo_tb_pkg/scoreboard/write/#ublk#114072647#57/immed__58
+                     ../fifo_tb_pkg2/scoreboard.svh(58)
+                                                        0          1
+/fifo_tb_pkg/scoreboard/write/#ublk#114072647#61/immed__62
+                     ../fifo_tb_pkg2/scoreboard.svh(62)
+                                                        0          1
+/fifo_tb_pkg/scoreboard/write/#ublk#114072647#67/immed__69
+                     ../fifo_tb_pkg2/scoreboard.svh(69)
+                                                        0          1
+/fifo_tb_pkg/random_sequence/body/#ublk#114072647#12/immed__14
+                     ../fifo_tb_pkg2/random_sequence.svh(14)
+                                                        0          1
+
+Covergroup Coverage:
+    Covergroups                      1        na        na   100.00%
+        Coverpoints/Crosses         12        na        na        na
+            Covergroup Bins        149       149         0   100.00%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /fifo_tb_pkg/coverage_collector/cg              100.00%        100          -    Covered              
+    covered/total bins:                                   149        149          -                      
+    missing/total bins:                                     0        149          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint c_data_to_DUT                          100.00%        100          -    Covered              
+        covered/total bins:                                64         64          -                      
+        missing/total bins:                                 0         64          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint c_write_enable                         100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint c_read_enable                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint c_rst_n                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint c_data_from_DUT                        100.00%        100          -    Covered              
+        covered/total bins:                                64         64          -                      
+        missing/total bins:                                 0         64          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint c_full                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint c_empty                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint c_one_p                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint c_one_d                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint c_write_enable_transitions             100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint c_one_p_transition_sequence            100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross c_full_cross_write_enable                   100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/fifo_tb_pkg::coverage_collector::cg  
+                                                      100.00%        100          -    Covered              
+    covered/total bins:                                   149        149          -                      
+    missing/total bins:                                     0        149          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint c_data_to_DUT                          100.00%        100          -    Covered              
+        covered/total bins:                                64         64          -                      
+        missing/total bins:                                 0         64          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0:67108863]                              152          1          -    Covered              
+        bin auto[67108864:134217727]                      168          1          -    Covered              
+        bin auto[134217728:201326591]                     158          1          -    Covered              
+        bin auto[201326592:268435455]                     167          1          -    Covered              
+        bin auto[268435456:335544319]                     156          1          -    Covered              
+        bin auto[335544320:402653183]                     152          1          -    Covered              
+        bin auto[402653184:469762047]                     152          1          -    Covered              
+        bin auto[469762048:536870911]                     175          1          -    Covered              
+        bin auto[536870912:603979775]                     146          1          -    Covered              
+        bin auto[603979776:671088639]                     145          1          -    Covered              
+        bin auto[671088640:738197503]                     150          1          -    Covered              
+        bin auto[738197504:805306367]                     140          1          -    Covered              
+        bin auto[805306368:872415231]                     137          1          -    Covered              
+        bin auto[872415232:939524095]                     158          1          -    Covered              
+        bin auto[939524096:1006632959]                    140          1          -    Covered              
+        bin auto[1006632960:1073741823]                   171          1          -    Covered              
+        bin auto[1073741824:1140850687]                   153          1          -    Covered              
+        bin auto[1140850688:1207959551]                   149          1          -    Covered              
+        bin auto[1207959552:1275068415]                   147          1          -    Covered              
+        bin auto[1275068416:1342177279]                   137          1          -    Covered              
+        bin auto[1342177280:1409286143]                   143          1          -    Covered              
+        bin auto[1409286144:1476395007]                   171          1          -    Covered              
+        bin auto[1476395008:1543503871]                   153          1          -    Covered              
+        bin auto[1543503872:1610612735]                   158          1          -    Covered              
+        bin auto[1610612736:1677721599]                   163          1          -    Covered              
+        bin auto[1677721600:1744830463]                   149          1          -    Covered              
+        bin auto[1744830464:1811939327]                   157          1          -    Covered              
+        bin auto[1811939328:1879048191]                   149          1          -    Covered              
+        bin auto[1879048192:1946157055]                   144          1          -    Covered              
+        bin auto[1946157056:2013265919]                   154          1          -    Covered              
+        bin auto[2013265920:2080374783]                   152          1          -    Covered              
+        bin auto[2080374784:2147483647]                   149          1          -    Covered              
+        bin auto[2147483648:2214592511]                   154          1          -    Covered              
+        bin auto[2214592512:2281701375]                   148          1          -    Covered              
+        bin auto[2281701376:2348810239]                   177          1          -    Covered              
+        bin auto[2348810240:2415919103]                   156          1          -    Covered              
+        bin auto[2415919104:2483027967]                   171          1          -    Covered              
+        bin auto[2483027968:2550136831]                   153          1          -    Covered              
+        bin auto[2550136832:2617245695]                   178          1          -    Covered              
+        bin auto[2617245696:2684354559]                   149          1          -    Covered              
+        bin auto[2684354560:2751463423]                   175          1          -    Covered              
+        bin auto[2751463424:2818572287]                   157          1          -    Covered              
+        bin auto[2818572288:2885681151]                   187          1          -    Covered              
+        bin auto[2885681152:2952790015]                   142          1          -    Covered              
+        bin auto[2952790016:3019898879]                   166          1          -    Covered              
+        bin auto[3019898880:3087007743]                   168          1          -    Covered              
+        bin auto[3087007744:3154116607]                   161          1          -    Covered              
+        bin auto[3154116608:3221225471]                   150          1          -    Covered              
+        bin auto[3221225472:3288334335]                   148          1          -    Covered              
+        bin auto[3288334336:3355443199]                   147          1          -    Covered              
+        bin auto[3355443200:3422552063]                   159          1          -    Covered              
+        bin auto[3422552064:3489660927]                   148          1          -    Covered              
+        bin auto[3489660928:3556769791]                   142          1          -    Covered              
+        bin auto[3556769792:3623878655]                   168          1          -    Covered              
+        bin auto[3623878656:3690987519]                   155          1          -    Covered              
+        bin auto[3690987520:3758096383]                   161          1          -    Covered              
+        bin auto[3758096384:3825205247]                   150          1          -    Covered              
+        bin auto[3825205248:3892314111]                   172          1          -    Covered              
+        bin auto[3892314112:3959422975]                   160          1          -    Covered              
+        bin auto[3959422976:4026531839]                   150          1          -    Covered              
+        bin auto[4026531840:4093640703]                   186          1          -    Covered              
+        bin auto[4093640704:4160749567]                   150          1          -    Covered              
+        bin auto[4160749568:4227858431]                   154          1          -    Covered              
+        bin auto[4227858432:4294967295]                   164          1          -    Covered              
+    Coverpoint c_write_enable                         100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      5043          1          -    Covered              
+        bin auto[1]                                      4958          1          -    Covered              
+    Coverpoint c_read_enable                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      4966          1          -    Covered              
+        bin auto[1]                                      5035          1          -    Covered              
+    Coverpoint c_rst_n                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                         1          1          -    Covered              
+        bin auto[1]                                     10000          1          -    Covered              
+    Coverpoint c_data_from_DUT                        100.00%        100          -    Covered              
+        covered/total bins:                                64         64          -                      
+        missing/total bins:                                 0         64          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0:67108863]                              134          1          -    Covered              
+        bin auto[67108864:134217727]                      181          1          -    Covered              
+        bin auto[134217728:201326591]                     178          1          -    Covered              
+        bin auto[201326592:268435455]                     181          1          -    Covered              
+        bin auto[268435456:335544319]                     141          1          -    Covered              
+        bin auto[335544320:402653183]                     166          1          -    Covered              
+        bin auto[402653184:469762047]                     162          1          -    Covered              
+        bin auto[469762048:536870911]                     177          1          -    Covered              
+        bin auto[536870912:603979775]                     153          1          -    Covered              
+        bin auto[603979776:671088639]                     126          1          -    Covered              
+        bin auto[671088640:738197503]                     213          1          -    Covered              
+        bin auto[738197504:805306367]                     143          1          -    Covered              
+        bin auto[805306368:872415231]                     117          1          -    Covered              
+        bin auto[872415232:939524095]                     143          1          -    Covered              
+        bin auto[939524096:1006632959]                    155          1          -    Covered              
+        bin auto[1006632960:1073741823]                   164          1          -    Covered              
+        bin auto[1073741824:1140850687]                   142          1          -    Covered              
+        bin auto[1140850688:1207959551]                   151          1          -    Covered              
+        bin auto[1207959552:1275068415]                   147          1          -    Covered              
+        bin auto[1275068416:1342177279]                   116          1          -    Covered              
+        bin auto[1342177280:1409286143]                   127          1          -    Covered              
+        bin auto[1409286144:1476395007]                   172          1          -    Covered              
+        bin auto[1476395008:1543503871]                   168          1          -    Covered              
+        bin auto[1543503872:1610612735]                   146          1          -    Covered              
+        bin auto[1610612736:1677721599]                   126          1          -    Covered              
+        bin auto[1677721600:1744830463]                   161          1          -    Covered              
+        bin auto[1744830464:1811939327]                   178          1          -    Covered              
+        bin auto[1811939328:1879048191]                   159          1          -    Covered              
+        bin auto[1879048192:1946157055]                   130          1          -    Covered              
+        bin auto[1946157056:2013265919]                   147          1          -    Covered              
+        bin auto[2013265920:2080374783]                   163          1          -    Covered              
+        bin auto[2080374784:2147483647]                   126          1          -    Covered              
+        bin auto[2147483648:2214592511]                   122          1          -    Covered              
+        bin auto[2214592512:2281701375]                   138          1          -    Covered              
+        bin auto[2281701376:2348810239]                   184          1          -    Covered              
+        bin auto[2348810240:2415919103]                   180          1          -    Covered              
+        bin auto[2415919104:2483027967]                   163          1          -    Covered              
+        bin auto[2483027968:2550136831]                   151          1          -    Covered              
+        bin auto[2550136832:2617245695]                   193          1          -    Covered              
+        bin auto[2617245696:2684354559]                   133          1          -    Covered              
+        bin auto[2684354560:2751463423]                   178          1          -    Covered              
+        bin auto[2751463424:2818572287]                   169          1          -    Covered              
+        bin auto[2818572288:2885681151]                   204          1          -    Covered              
+        bin auto[2885681152:2952790015]                   146          1          -    Covered              
+        bin auto[2952790016:3019898879]                   178          1          -    Covered              
+        bin auto[3019898880:3087007743]                   181          1          -    Covered              
+        bin auto[3087007744:3154116607]                   132          1          -    Covered              
+        bin auto[3154116608:3221225471]                   148          1          -    Covered              
+        bin auto[3221225472:3288334335]                   128          1          -    Covered              
+        bin auto[3288334336:3355443199]                   150          1          -    Covered              
+        bin auto[3355443200:3422552063]                   159          1          -    Covered              
+        bin auto[3422552064:3489660927]                   181          1          -    Covered              
+        bin auto[3489660928:3556769791]                   134          1          -    Covered              
+        bin auto[3556769792:3623878655]                   181          1          -    Covered              
+        bin auto[3623878656:3690987519]                   129          1          -    Covered              
+        bin auto[3690987520:3758096383]                   135          1          -    Covered              
+        bin auto[3758096384:3825205247]                   145          1          -    Covered              
+        bin auto[3825205248:3892314111]                   199          1          -    Covered              
+        bin auto[3892314112:3959422975]                   114          1          -    Covered              
+        bin auto[3959422976:4026531839]                   160          1          -    Covered              
+        bin auto[4026531840:4093640703]                   179          1          -    Covered              
+        bin auto[4093640704:4160749567]                   179          1          -    Covered              
+        bin auto[4160749568:4227858431]                   169          1          -    Covered              
+        bin auto[4227858432:4294967295]                   166          1          -    Covered              
+    Coverpoint c_full                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      9128          1          -    Covered              
+        bin auto[1]                                       873          1          -    Covered              
+    Coverpoint c_empty                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      9003          1          -    Covered              
+        bin auto[1]                                       998          1          -    Covered              
+    Coverpoint c_one_p                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      8257          1          -    Covered              
+        bin auto[1]                                      1744          1          -    Covered              
+    Coverpoint c_one_d                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      7850          1          -    Covered              
+        bin auto[1]                                      2151          1          -    Covered              
+    Coverpoint c_write_enable_transitions             100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin low_to_high                                  2518          1          -    Covered              
+        bin high_to_low                                  2518          1          -    Covered              
+    Coverpoint c_one_p_transition_sequence            100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin edge_of_full                                 1780          1          -    Covered              
+    Cross c_full_cross_write_enable                   100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <auto[1],auto[1]>                         411          1          -    Covered              
+            bin <auto[0],auto[1]>                        4547          1          -    Covered              
+            bin <auto[1],auto[0]>                         462          1          -    Covered              
+            bin <auto[0],auto[0]>                        4581          1          -    Covered              
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                     241       112       129    46.47%
+
+================================Statement Details================================
+
+Statement Coverage for instance /fifo_tb_pkg --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../fifo_tb_pkg2/dut_config.svh
+    9               1                    ***0***     
+    9               2                    ***0***     
+    9               3                    ***0***     
+    9               4                    ***0***     
+    9               5                    ***0***     
+    9               6                    ***0***     
+    9               7                    ***0***     
+    9               8                    ***0***     
+    9               9                    ***0***     
+    9              10                    ***0***     
+    16              1                          1     
+  File ../fifo_tb_pkg2/transaction.svh
+    12              1                    ***0***     
+    12              2                    ***0***     
+    12              3                    ***0***     
+    12              4                    ***0***     
+    12              5                    ***0***     
+    12              6                      10000     
+    12              7                    ***0***     
+    12              8                    ***0***     
+    12              9                      20002     
+    12             10                    ***0***     
+    30              1                      30004     
+    36              1                      10001     
+    37              1                      10001     
+    38              1                      10001     
+    44              1                    ***0***     
+    45              1                      20002     
+    46              1                      20002     
+    47              1                      20002     
+    48              1                      20002     
+    49              1                      20002     
+    50              1                      20002     
+    51              1                      20002     
+    52              1                      20002     
+    53              1                      20002     
+    54              1                      20002     
+  File ../fifo_tb_pkg2/driver.svh
+    9               1                    ***0***     
+    9               2                    ***0***     
+    9               3                    ***0***     
+    16              1                          1     
+    24              1                    ***0***     
+    27              1                          1     
+    30              1                          1     
+    36              1                          1     
+    43              1                      10001     
+    46              1                      10000     
+    49              1                      10000     
+    53              1                      10000     
+    54              1                      10000     
+    55              1                      10000     
+    58              1                      10000     
+  File ../fifo_tb_pkg2/monitor.svh
+    2               1                    ***0***     
+    2               2                    ***0***     
+    2               3                    ***0***     
+    10              1                          1     
+    14              1                          1     
+    16              1                    ***0***     
+    17              1                          1     
+    20              1                          1     
+    25              1                          1     
+    26              1                          1     
+    28              1                      10002     
+    29              1                      10001     
+    30              1                      10001     
+    31              1                      10001     
+    32              1                      10001     
+    33              1                      10001     
+    34              1                      10001     
+    35              1                      10001     
+    36              1                      10001     
+    37              1                      10001     
+    38              1                      10001     
+    39              1                      10001     
+    40              1                      10001     
+    43              1                      10001     
+  File ../fifo_tb_pkg2/agent.svh
+    8               1                    ***0***     
+    8               2                    ***0***     
+    8               3                    ***0***     
+    18              1                          1     
+    24              1                          1     
+    25              1                          1     
+    26              1                          1     
+    29              1                          1     
+    32              1                          1     
+    39              1                          1     
+    42              1                          1     
+  File ../fifo_tb_pkg2/coverage_collector.svh
+    2               1                    ***0***     
+    2               2                    ***0***     
+    2               3                    ***0***     
+    31              1                          1     
+    32              1                          1     
+    36              1                          1     
+    40              1                      10001     
+    41              1                      10001     
+    42              1                      10001     
+  File ../fifo_tb_pkg2/scoreboard.svh
+    2               1                    ***0***     
+    2               2                    ***0***     
+    2               3                    ***0***     
+    9               1                          1     
+    10              1                          1     
+    17              1                          1     
+    18              1                          1     
+    22              1                          1     
+    26              1                      10001     
+    27              1                      10001     
+    28              1                      10001     
+    29              1                      10001     
+    30              1                      10001     
+    31              1                      10001     
+    32              1                      10001     
+    66              1                       5034     
+    68              1                       4529     
+    77              1                       4957     
+    80              1                       4532     
+    85              1                       4958     
+    86              1                       4958     
+    89              1                       5035     
+    92              1                      10001     
+    93              1                      10001     
+    94              1                      10001     
+  File ../fifo_tb_pkg2/env.svh
+    8               1                    ***0***     
+    8               2                    ***0***     
+    8               3                    ***0***     
+    16              1                          1     
+    22              1                          1     
+    25              1                          1     
+    28              1                          1     
+    31              1                          1     
+    37              1                          1     
+    39              1                          1     
+  File ../fifo_tb_pkg2/sequence.svh
+    16              1                    ***0***     
+    16              2                    ***0***     
+    16              3                    ***0***     
+    16              4                    ***0***     
+    16              5                    ***0***     
+    16              6                    ***0***     
+    16              7                    ***0***     
+    16              8                    ***0***     
+    16              9                    ***0***     
+    16             10                    ***0***     
+    19              1                          1     
+    28              1                    ***0***     
+    29              1                    ***0***     
+    30              1                    ***0***     
+    31              1                    ***0***     
+    32              1                    ***0***     
+    33              1                    ***0***     
+    35              1                    ***0***     
+    36              1                    ***0***     
+    37              1                    ***0***     
+    38              1                    ***0***     
+    39              1                    ***0***     
+    40              1                    ***0***     
+    42              1                    ***0***     
+    43              1                    ***0***     
+    44              1                    ***0***     
+    45              1                    ***0***     
+    46              1                    ***0***     
+    47              1                    ***0***     
+    49              1                    ***0***     
+    50              1                    ***0***     
+    51              1                    ***0***     
+    52              1                    ***0***     
+    53              1                    ***0***     
+    54              1                    ***0***     
+    56              1                    ***0***     
+    57              1                    ***0***     
+    58              1                    ***0***     
+    59              1                    ***0***     
+    60              1                    ***0***     
+    61              1                    ***0***     
+    64              1                    ***0***     
+    65              1                    ***0***     
+    66              1                    ***0***     
+    67              1                    ***0***     
+    68              1                    ***0***     
+    69              1                    ***0***     
+    71              1                    ***0***     
+    72              1                    ***0***     
+    73              1                    ***0***     
+    74              1                    ***0***     
+    75              1                    ***0***     
+    76              1                    ***0***     
+    78              1                    ***0***     
+    79              1                    ***0***     
+    80              1                    ***0***     
+    81              1                    ***0***     
+    82              1                    ***0***     
+    83              1                    ***0***     
+    85              1                    ***0***     
+    86              1                    ***0***     
+    87              1                    ***0***     
+    88              1                    ***0***     
+    89              1                    ***0***     
+    90              1                    ***0***     
+    92              1                    ***0***     
+    93              1                    ***0***     
+    94              1                    ***0***     
+    95              1                    ***0***     
+    96              1                    ***0***     
+    97              1                    ***0***     
+  File ../fifo_tb_pkg2/random_sequence.svh
+    2               1                    ***0***     
+    2               2                    ***0***     
+    2               3                    ***0***     
+    2               4                    ***0***     
+    2               5                    ***0***     
+    2               6                          1     
+    2               7                    ***0***     
+    2               8                    ***0***     
+    2               9                    ***0***     
+    2              10                    ***0***     
+    5               1                          1     
+    11              1                          1     
+    12              1                      10000     
+    13              1                      10000     
+    15              1                      10000     
+  File ../fifo_tb_pkg2/test_base.svh
+    8               1                    ***0***     
+    8               2                    ***0***     
+    8               3                    ***0***     
+    18              1                          1     
+    24              1                          1     
+    27              1                          1     
+    32              1                    ***0***     
+    35              1                          1     
+    43              1                    ***0***     
+    46              1                    ***0***     
+    49              1                    ***0***     
+    52              1                    ***0***     
+    55              1                    ***0***     
+  File ../fifo_tb_pkg2/random_test.svh
+    8               1                    ***0***     
+    8               2                    ***0***     
+    8               3                          1     
+    14              1                          1     
+    18              1                          1     
+    19              1                          1     
+    23              1                          1     
+    29              1                          1     
+    32              1                          1     
+    35              1                          1     
+    38              1                          1     
+    41              1                          1     
+
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /fifo_tb_pkg/coverage_collector/cg              100.00%        100          -    Covered              
+    covered/total bins:                                   149        149          -                      
+    missing/total bins:                                     0        149          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint c_data_to_DUT                          100.00%        100          -    Covered              
+        covered/total bins:                                64         64          -                      
+        missing/total bins:                                 0         64          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint c_write_enable                         100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint c_read_enable                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint c_rst_n                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint c_data_from_DUT                        100.00%        100          -    Covered              
+        covered/total bins:                                64         64          -                      
+        missing/total bins:                                 0         64          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint c_full                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint c_empty                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint c_one_p                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint c_one_d                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint c_write_enable_transitions             100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint c_one_p_transition_sequence            100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross c_full_cross_write_enable                   100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/fifo_tb_pkg::coverage_collector::cg  
+                                                      100.00%        100          -    Covered              
+    covered/total bins:                                   149        149          -                      
+    missing/total bins:                                     0        149          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint c_data_to_DUT                          100.00%        100          -    Covered              
+        covered/total bins:                                64         64          -                      
+        missing/total bins:                                 0         64          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0:67108863]                              152          1          -    Covered              
+        bin auto[67108864:134217727]                      168          1          -    Covered              
+        bin auto[134217728:201326591]                     158          1          -    Covered              
+        bin auto[201326592:268435455]                     167          1          -    Covered              
+        bin auto[268435456:335544319]                     156          1          -    Covered              
+        bin auto[335544320:402653183]                     152          1          -    Covered              
+        bin auto[402653184:469762047]                     152          1          -    Covered              
+        bin auto[469762048:536870911]                     175          1          -    Covered              
+        bin auto[536870912:603979775]                     146          1          -    Covered              
+        bin auto[603979776:671088639]                     145          1          -    Covered              
+        bin auto[671088640:738197503]                     150          1          -    Covered              
+        bin auto[738197504:805306367]                     140          1          -    Covered              
+        bin auto[805306368:872415231]                     137          1          -    Covered              
+        bin auto[872415232:939524095]                     158          1          -    Covered              
+        bin auto[939524096:1006632959]                    140          1          -    Covered              
+        bin auto[1006632960:1073741823]                   171          1          -    Covered              
+        bin auto[1073741824:1140850687]                   153          1          -    Covered              
+        bin auto[1140850688:1207959551]                   149          1          -    Covered              
+        bin auto[1207959552:1275068415]                   147          1          -    Covered              
+        bin auto[1275068416:1342177279]                   137          1          -    Covered              
+        bin auto[1342177280:1409286143]                   143          1          -    Covered              
+        bin auto[1409286144:1476395007]                   171          1          -    Covered              
+        bin auto[1476395008:1543503871]                   153          1          -    Covered              
+        bin auto[1543503872:1610612735]                   158          1          -    Covered              
+        bin auto[1610612736:1677721599]                   163          1          -    Covered              
+        bin auto[1677721600:1744830463]                   149          1          -    Covered              
+        bin auto[1744830464:1811939327]                   157          1          -    Covered              
+        bin auto[1811939328:1879048191]                   149          1          -    Covered              
+        bin auto[1879048192:1946157055]                   144          1          -    Covered              
+        bin auto[1946157056:2013265919]                   154          1          -    Covered              
+        bin auto[2013265920:2080374783]                   152          1          -    Covered              
+        bin auto[2080374784:2147483647]                   149          1          -    Covered              
+        bin auto[2147483648:2214592511]                   154          1          -    Covered              
+        bin auto[2214592512:2281701375]                   148          1          -    Covered              
+        bin auto[2281701376:2348810239]                   177          1          -    Covered              
+        bin auto[2348810240:2415919103]                   156          1          -    Covered              
+        bin auto[2415919104:2483027967]                   171          1          -    Covered              
+        bin auto[2483027968:2550136831]                   153          1          -    Covered              
+        bin auto[2550136832:2617245695]                   178          1          -    Covered              
+        bin auto[2617245696:2684354559]                   149          1          -    Covered              
+        bin auto[2684354560:2751463423]                   175          1          -    Covered              
+        bin auto[2751463424:2818572287]                   157          1          -    Covered              
+        bin auto[2818572288:2885681151]                   187          1          -    Covered              
+        bin auto[2885681152:2952790015]                   142          1          -    Covered              
+        bin auto[2952790016:3019898879]                   166          1          -    Covered              
+        bin auto[3019898880:3087007743]                   168          1          -    Covered              
+        bin auto[3087007744:3154116607]                   161          1          -    Covered              
+        bin auto[3154116608:3221225471]                   150          1          -    Covered              
+        bin auto[3221225472:3288334335]                   148          1          -    Covered              
+        bin auto[3288334336:3355443199]                   147          1          -    Covered              
+        bin auto[3355443200:3422552063]                   159          1          -    Covered              
+        bin auto[3422552064:3489660927]                   148          1          -    Covered              
+        bin auto[3489660928:3556769791]                   142          1          -    Covered              
+        bin auto[3556769792:3623878655]                   168          1          -    Covered              
+        bin auto[3623878656:3690987519]                   155          1          -    Covered              
+        bin auto[3690987520:3758096383]                   161          1          -    Covered              
+        bin auto[3758096384:3825205247]                   150          1          -    Covered              
+        bin auto[3825205248:3892314111]                   172          1          -    Covered              
+        bin auto[3892314112:3959422975]                   160          1          -    Covered              
+        bin auto[3959422976:4026531839]                   150          1          -    Covered              
+        bin auto[4026531840:4093640703]                   186          1          -    Covered              
+        bin auto[4093640704:4160749567]                   150          1          -    Covered              
+        bin auto[4160749568:4227858431]                   154          1          -    Covered              
+        bin auto[4227858432:4294967295]                   164          1          -    Covered              
+    Coverpoint c_write_enable                         100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      5043          1          -    Covered              
+        bin auto[1]                                      4958          1          -    Covered              
+    Coverpoint c_read_enable                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      4966          1          -    Covered              
+        bin auto[1]                                      5035          1          -    Covered              
+    Coverpoint c_rst_n                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                         1          1          -    Covered              
+        bin auto[1]                                     10000          1          -    Covered              
+    Coverpoint c_data_from_DUT                        100.00%        100          -    Covered              
+        covered/total bins:                                64         64          -                      
+        missing/total bins:                                 0         64          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0:67108863]                              134          1          -    Covered              
+        bin auto[67108864:134217727]                      181          1          -    Covered              
+        bin auto[134217728:201326591]                     178          1          -    Covered              
+        bin auto[201326592:268435455]                     181          1          -    Covered              
+        bin auto[268435456:335544319]                     141          1          -    Covered              
+        bin auto[335544320:402653183]                     166          1          -    Covered              
+        bin auto[402653184:469762047]                     162          1          -    Covered              
+        bin auto[469762048:536870911]                     177          1          -    Covered              
+        bin auto[536870912:603979775]                     153          1          -    Covered              
+        bin auto[603979776:671088639]                     126          1          -    Covered              
+        bin auto[671088640:738197503]                     213          1          -    Covered              
+        bin auto[738197504:805306367]                     143          1          -    Covered              
+        bin auto[805306368:872415231]                     117          1          -    Covered              
+        bin auto[872415232:939524095]                     143          1          -    Covered              
+        bin auto[939524096:1006632959]                    155          1          -    Covered              
+        bin auto[1006632960:1073741823]                   164          1          -    Covered              
+        bin auto[1073741824:1140850687]                   142          1          -    Covered              
+        bin auto[1140850688:1207959551]                   151          1          -    Covered              
+        bin auto[1207959552:1275068415]                   147          1          -    Covered              
+        bin auto[1275068416:1342177279]                   116          1          -    Covered              
+        bin auto[1342177280:1409286143]                   127          1          -    Covered              
+        bin auto[1409286144:1476395007]                   172          1          -    Covered              
+        bin auto[1476395008:1543503871]                   168          1          -    Covered              
+        bin auto[1543503872:1610612735]                   146          1          -    Covered              
+        bin auto[1610612736:1677721599]                   126          1          -    Covered              
+        bin auto[1677721600:1744830463]                   161          1          -    Covered              
+        bin auto[1744830464:1811939327]                   178          1          -    Covered              
+        bin auto[1811939328:1879048191]                   159          1          -    Covered              
+        bin auto[1879048192:1946157055]                   130          1          -    Covered              
+        bin auto[1946157056:2013265919]                   147          1          -    Covered              
+        bin auto[2013265920:2080374783]                   163          1          -    Covered              
+        bin auto[2080374784:2147483647]                   126          1          -    Covered              
+        bin auto[2147483648:2214592511]                   122          1          -    Covered              
+        bin auto[2214592512:2281701375]                   138          1          -    Covered              
+        bin auto[2281701376:2348810239]                   184          1          -    Covered              
+        bin auto[2348810240:2415919103]                   180          1          -    Covered              
+        bin auto[2415919104:2483027967]                   163          1          -    Covered              
+        bin auto[2483027968:2550136831]                   151          1          -    Covered              
+        bin auto[2550136832:2617245695]                   193          1          -    Covered              
+        bin auto[2617245696:2684354559]                   133          1          -    Covered              
+        bin auto[2684354560:2751463423]                   178          1          -    Covered              
+        bin auto[2751463424:2818572287]                   169          1          -    Covered              
+        bin auto[2818572288:2885681151]                   204          1          -    Covered              
+        bin auto[2885681152:2952790015]                   146          1          -    Covered              
+        bin auto[2952790016:3019898879]                   178          1          -    Covered              
+        bin auto[3019898880:3087007743]                   181          1          -    Covered              
+        bin auto[3087007744:3154116607]                   132          1          -    Covered              
+        bin auto[3154116608:3221225471]                   148          1          -    Covered              
+        bin auto[3221225472:3288334335]                   128          1          -    Covered              
+        bin auto[3288334336:3355443199]                   150          1          -    Covered              
+        bin auto[3355443200:3422552063]                   159          1          -    Covered              
+        bin auto[3422552064:3489660927]                   181          1          -    Covered              
+        bin auto[3489660928:3556769791]                   134          1          -    Covered              
+        bin auto[3556769792:3623878655]                   181          1          -    Covered              
+        bin auto[3623878656:3690987519]                   129          1          -    Covered              
+        bin auto[3690987520:3758096383]                   135          1          -    Covered              
+        bin auto[3758096384:3825205247]                   145          1          -    Covered              
+        bin auto[3825205248:3892314111]                   199          1          -    Covered              
+        bin auto[3892314112:3959422975]                   114          1          -    Covered              
+        bin auto[3959422976:4026531839]                   160          1          -    Covered              
+        bin auto[4026531840:4093640703]                   179          1          -    Covered              
+        bin auto[4093640704:4160749567]                   179          1          -    Covered              
+        bin auto[4160749568:4227858431]                   169          1          -    Covered              
+        bin auto[4227858432:4294967295]                   166          1          -    Covered              
+    Coverpoint c_full                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      9128          1          -    Covered              
+        bin auto[1]                                       873          1          -    Covered              
+    Coverpoint c_empty                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      9003          1          -    Covered              
+        bin auto[1]                                       998          1          -    Covered              
+    Coverpoint c_one_p                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      8257          1          -    Covered              
+        bin auto[1]                                      1744          1          -    Covered              
+    Coverpoint c_one_d                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      7850          1          -    Covered              
+        bin auto[1]                                      2151          1          -    Covered              
+    Coverpoint c_write_enable_transitions             100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin low_to_high                                  2518          1          -    Covered              
+        bin high_to_low                                  2518          1          -    Covered              
+    Coverpoint c_one_p_transition_sequence            100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin edge_of_full                                 1780          1          -    Covered              
+    Cross c_full_cross_write_enable                   100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <auto[1],auto[1]>                         411          1          -    Covered              
+            bin <auto[0],auto[1]>                        4547          1          -    Covered              
+            bin <auto[1],auto[0]>                         462          1          -    Covered              
+            bin <auto[0],auto[0]>                        4581          1          -    Covered              
+
+TOTAL COVERGROUP COVERAGE: 100.00%  COVERGROUP TYPES: 1
+
+ASSERTION RESULTS:
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/fifo_tb_pkg/scoreboard/write/#ublk#114072647#33/immed__34
+                     ../fifo_tb_pkg2/scoreboard.svh(34)
+                                                        0          1
+/fifo_tb_pkg/scoreboard/write/#ublk#114072647#37/immed__38
+                     ../fifo_tb_pkg2/scoreboard.svh(38)
+                                                        0          1
+/fifo_tb_pkg/scoreboard/write/#ublk#114072647#41/immed__42
+                     ../fifo_tb_pkg2/scoreboard.svh(42)
+                                                        0          1
+/fifo_tb_pkg/scoreboard/write/#ublk#114072647#45/immed__46
+                     ../fifo_tb_pkg2/scoreboard.svh(46)
+                                                        0          1
+/fifo_tb_pkg/scoreboard/write/#ublk#114072647#49/immed__50
+                     ../fifo_tb_pkg2/scoreboard.svh(50)
+                                                        0          1
+/fifo_tb_pkg/scoreboard/write/#ublk#114072647#53/immed__54
+                     ../fifo_tb_pkg2/scoreboard.svh(54)
+                                                        0          1
+/fifo_tb_pkg/scoreboard/write/#ublk#114072647#57/immed__58
+                     ../fifo_tb_pkg2/scoreboard.svh(58)
+                                                        0          1
+/fifo_tb_pkg/scoreboard/write/#ublk#114072647#61/immed__62
+                     ../fifo_tb_pkg2/scoreboard.svh(62)
+                                                        0          1
+/fifo_tb_pkg/scoreboard/write/#ublk#114072647#67/immed__69
+                     ../fifo_tb_pkg2/scoreboard.svh(69)
+                                                        0          1
+/fifo_tb_pkg/random_sequence/body/#ublk#114072647#12/immed__14
+                     ../fifo_tb_pkg2/random_sequence.svh(14)
+                                                        0          1
+
+Total Coverage By Instance (filtered view): 82.93%
+
+End time: 13:57:59 on May 30,2025, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
